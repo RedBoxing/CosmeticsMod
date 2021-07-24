@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "fr.redboxing.cosmeticsmod.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinAbstractClientPlayerEntity",
+    "MixinCapeFeatureRenderer",
+    "MixinPlayerEntityRenderer"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

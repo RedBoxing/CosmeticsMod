@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "cosmeticsmod",
+  "version": "${version}",
+  "name": "CosmeticsMod",
+  "description": "A Cosmetics mod for minecraft",
+  "authors": [
+    "RedBoxing"
+  ],
+  "contact": {
+    "website": "https://redboxing.fr"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "fr.redboxing.cosmeticsmod.CosmeticsMod"
+    ]
+  },
+  "mixins": [
+    "cosmeticsmod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.6",
+    "fabric": "*",
+    "minecraft": "1.17.1"
+  }
+}
