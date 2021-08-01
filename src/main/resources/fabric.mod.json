@@ -17,6 +17,7 @@
       "fr.redboxing.cosmeticsmod.CosmeticsMod"
     ]
   },
+  "accessWidener": "cosmeticsmod.accesswidener",
   "mixins": [
     "cosmeticsmod.mixins.json"
   ],

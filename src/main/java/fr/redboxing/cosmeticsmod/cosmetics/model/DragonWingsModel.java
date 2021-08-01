@@ -2,18 +2,19 @@ package fr.redboxing.cosmeticsmod.cosmetics.model;
 
 import com.google.common.collect.ImmutableList;
 import net.minecraft.client.model.*;
+import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.AnimalModel;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.Vec3f;
 
-public class DragonWingsModel<T extends LivingEntity> extends AnimalModel<T> {
+public class DragonWingsModel extends AnimalModel<AbstractClientPlayerEntity> {
     private final ModelPart leftWing;
     private final ModelPart leftWingTip;
     private final ModelPart rightWing;
     private final ModelPart rightWingTip;
-    private T entity;
+    private AbstractClientPlayerEntity entity;
     private float limbDistance;
     private float animationProgress;
 
@@ -33,7 +34,7 @@ public class DragonWingsModel<T extends LivingEntity> extends AnimalModel<T> {
     }
 
     @Override
-    public void setAngles(T entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
+    public void setAngles(AbstractClientPlayerEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
         this.entity = entity;
         this.limbDistance = limbDistance;
         this.animationProgress = animationProgress;

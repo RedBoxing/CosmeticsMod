@@ -1,0 +1,10 @@
+{
+  "menu.cosmeticsmod.main.title": "Cosmetics Mod",
+  "login.enterUsername": "Enter Username",
+  "login.enterPassword": "Enter Password",
+  "login.login": "Login",
+  "login.register": "Register",
+  "cosmeticsmod.logout": "Logout",
+  "key.cosmeticsmod.opengui": "Open Cosmetics Menu",
+  "category.cosmeticsmod": "Cosmetics Mod"
+}

@@ -1,6 +1,6 @@
 package fr.redboxing.cosmeticsmod.mixin;
 
-import fr.redboxing.cosmeticsmod.cosmetics.CosmeticsLayer;
+import fr.redboxing.cosmeticsmod.cosmetics.CosmeticsFeatureRenderer;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.LivingEntityRenderer;
@@ -19,6 +19,6 @@ public abstract class MixinPlayerEntityRenderer extends LivingEntityRenderer<Abs
 
     @Inject(method = "<init>", at = @At("RETURN"))
     public void init(EntityRendererFactory.Context ctx, boolean slim, CallbackInfo ci) {
-        this.addFeature(new CosmeticsLayer<>((PlayerEntityRenderer)(Object)this, ctx.getModelLoader()));
+        this.addFeature(new CosmeticsFeatureRenderer((PlayerEntityRenderer)(Object)this, ctx.getModelLoader()));
     }
 }

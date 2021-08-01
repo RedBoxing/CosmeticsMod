@@ -1,7 +1,7 @@
 package fr.redboxing.cosmeticsmod.mixin;
 
 import com.mojang.authlib.GameProfile;
-import fr.redboxing.cosmeticsmod.cosmetics.PlayerHandler;
+import fr.redboxing.cosmeticsmod.events.PlayerJoinCallback;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.player.PlayerEntity;
@@ -20,6 +20,7 @@ public abstract class MixinAbstractClientPlayerEntity extends PlayerEntity {
 
     @Inject(method = "<init>", at = @At("RETURN"))
     public void init(ClientWorld world, GameProfile profile, CallbackInfo ci) {
-        PlayerHandler.onPlayerJoin(this);
+        //PlayerHandler.onPlayerJoin(this);
+        PlayerJoinCallback.EVENT.invoker().call(this);
     }
 }

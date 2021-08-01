@@ -4,8 +4,14 @@
   "package": "fr.redboxing.cosmeticsmod.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "IMinecraftClient",
+    "IModelPart",
     "MixinAbstractClientPlayerEntity",
     "MixinCapeFeatureRenderer",
+    "MixinClientBuiltinResourcePackProvider",
+    "MixinGameOptions",
+    "MixinMinecraftClient",
+    "MixinModelLoader",
     "MixinPlayerEntityRenderer"
   ],
   "client": [
